@@ -30,7 +30,11 @@ public class Fly implements Listener , CommandExecutor{
     {
         this.plugin=pl;
     } 
-    
+    @EventHandler
+  public void onPvP(final PlayerJoinEvent event)
+  {
+      players.remove(event.getPlayer());
+  }
   @EventHandler
   public void onPvP(final PlayerJoinEvent event)
   {
